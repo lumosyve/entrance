@@ -5,98 +5,126 @@
 
 body {
   font-family: "vivoSans-Regular";
-  background-image: url("../assets/images/bg-img-2.jpeg");
+  background-image: url("../assets/images/bg-img.png");
   background-size: cover;
   background-position: center;
 
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .lumosyve-container {
-  display: flex;
-  width: 70%;
-  height: 70%;
-  border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  font-size: 12px;
-  overflow: hidden;
+  color: #fff;
 
-  .desc-container {
-    flex: 1;
+  .home-container {
+    padding: 80px 100px 40px 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 60px 120px;
-    .header-content {
+    justify-content: space-between;
+    height: calc(100vh - 160px);
+    width: calc(100vw - 200px);
+    overflow: auto;
+    &_header {
       display: flex;
+      gap: 10px;
       align-items: center;
-      justify-content: space-between;
-      color: rgb(18, 16, 12);
-      font-size: 1.4rem;
-      // .works-tip {
-      // }
-    }
-
-    .content-date {
-      margin-top: 50px;
-      font-size: 4rem;
-      color: #fff;
-    }
-
-    .container-title {
-      color: rgb(163, 125, 93);
-      font-size: 6rem;
-      margin: 20px 0;
-    }
-
-    .container-sub-title {
-      color: rgb(18, 16, 12);
-      font-size: 1.4rem;
-    }
-
-    .collection-area {
-      display: flex;
-      align-items: center;
-      margin-top: 20px;
-
-      .enter-btn {
-        cursor: pointer;
-        font-size: 1.2rem;
-        padding: 6px 30px;
-        background-color: rgb(181, 159, 144);
-        color: #fff;
-        border: none;
-        border-radius: 50px;
+      font-size: 18px;
+      i.icon-block {
+        width: 8px;
+        height: 14px;
+        background-color: #fff;
+        border-radius: 0 10px 10px 0;
       }
     }
-  }
 
-  .nav-container {
-    width: 30%;
-    flex-shrink: 0;
-    height: 100%;
-    background-color: #fff;
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;
-    &.hide {
-      width: 0%;
+    &_main {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      &-title {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 50px;
+        // transform: scaleY(1.1);
+
+        .github-link {
+          display: flex;
+          align-items: center;
+          .icon-github {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+      &-subtitle {
+        font-size: 120px;
+        font-weight: bold;
+        transform: scaleX(1);
+        transform-origin: left;
+        letter-spacing: 20px;
+      }
+
+      &-entrance {
+        font-size: 25px;
+        text-decoration: underline;
+        cursor: pointer;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: #1642f9;
+        }
+      }
+
+      .cricle {
+        position: absolute;
+        left: -50px;
+        top: -50px;
+        z-index: -1;
+        // transform: translate(50px, 50px);
+        width: 110px;
+        height: 110px;
+        border-radius: 100%;
+        background-color: transparent;
+        background: linear-gradient(135deg, #1642f9, transparent);
+      }
     }
 
-    .empty-text {
-      white-space: nowrap;
-      width: 100%;
-      height: 100%;
+    &_footer {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
+      align-items: flex-end;
+      justify-content: space-between;
+      font-size: 18px;
+      &-left {
+        line-height: 40px;
+        .email-info {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          .github-link {
+            display: flex;
+            align-items: center;
+            .icon-github {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+      &-right {
+        a {
+          color: #fff;
+          text-decoration: underline;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: #1642f9;
+          }
+        }
+      }
     }
   }
 }
